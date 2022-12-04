@@ -1,0 +1,86 @@
+<html>
+<head>
+<style>
+
+body {
+background-repeat: no-repeat;
+background-size:cover;
+}
+
+h1 {
+  font-size: 3em; 
+}
+
+</style>
+</head>
+<body background="https://thumbs.dreamstime.com/b/global-business-logistics-import-export-background-container-cargo-freight-ship-transport-concept-137750581.jpg">
+<br><br>
+<h1 align="center">Select Pick Up & Destination</h1>
+<form action="option.php" method="get">
+<br><br><br>
+<div align="center">
+  <label for="logis"><b>Pickup:</b></label>
+  <select name="logis" id="logis">
+    <option value="Tamil Nadu">Tamil Nadu</option>
+    <option value="Karnataka">Karnataka</option>
+    <option value="Andhra Pradhesh">Andhra Pradhesh</option>
+    <option value="audi">Kerala</option>
+  </select>
+<br><br>
+   <label for="logs"><b>Destination</b></label>
+  <select name="logis" id="logis">
+    <option value="Tamil Nadu">Tamil Nadu</option>
+    <option value="Karnataka">Karnataka</option>
+    <option value="Andhra Pradhesh">Andhra Pradhesh:</option>
+    <option value="Kerala">Kerala</option>
+  </select>
+<br><br>
+<label for="load"><b>Load Quantity:</b></label>
+<input type="text" name="quantity">
+<br><br>
+  <input type="submit" name="CheckAvailability" value="CheckAvailability">
+  <br><br>
+</form>
+</div>
+</body>
+</html>
+
+<?php
+if(isset($_POST['CheckAvailability']))
+{
+    $name=$_REQUEST['logis'];
+    $logs=$_REQUEST['logs'];
+    $load=$_REQUEST['load'];
+    $c=mysql_connect("localhost","root","");
+    mysql_select_db("pd");
+    $ins=mysql_query("insert into option (logis) values ('$name')",$c);
+    if($ins)
+    {
+        echo "<br>".$name."inserted";
+    }
+    else
+    {
+        echo mysql_error();
+    }
+
+
+$ins=mysql_query("insert into option (logs) values ('$logs')",$c);
+    if($ins)
+    {
+        echo "<br>".$logs."inserted";
+    }
+    else
+    {
+        echo mysql_error();
+    }$ins=mysql_query("insert into option (load) values ('$load')",$c);
+    if($ins)
+    {
+        echo "<br>".$load."inserted";
+    }
+    else
+    {
+        echo mysql_error();
+    }
+
+
+}

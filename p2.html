@@ -1,0 +1,94 @@
+<html>
+<head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+/* Create two equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 50%;
+  padding: 10px;
+  font-size: 200%;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+/* Style the buttons */
+.btn {
+  border: none;
+  outline: none;
+  padding: 12px 16px;
+  background-color: #f1f1f1;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: #ddd;
+}
+
+.btn.active {
+  background-color: #666;
+  color: white;
+}
+</style>
+</head>
+<body>
+<br>
+<div class="row">
+  <div class="column" style="background-color:#aaa;">
+    <h1>Logistics services in your budget</h1>
+    <p> <h3>From small loads to big shipments, book logisitics services for any load type at the best rates.</h3>
+</p>
+  </div>
+  <div class="column" style="background-color:#bbb;">
+    <h2></h2>
+    <img src="https://www.trucksbuses.com/blogImages/uploads/2019/04/Tata-ace-mini-truck.jpg">
+  </div>
+</div>
+<div class="column" style="background-color:#ddd;">
+    <h2></h2>
+    <img src="https://media.istockphoto.com/id/182823529/photo/interest-rate-0.jpg?b=1&s=170667a&w=0&k=20&c=VegBhkqncbIJI5qOojDj2AxvBeAeKujON2X4-o_KXJo=">
+  </div>
+  <div class="column" style="background-color:#ccc;">
+    <h1>Book logistics services at 0% Commission</h1>
+    <p><h3>Select and book from a wide range of logisitcs services providers without paying any commission.</h3>
+        </p>
+  </div>
+  <div class="column" style="background-color:#bbb;">
+    <h2></h2>
+    <img src="https://etimg.etb2bimg.com/photo/73434382.cms">
+  </div>
+    <div class="row">
+        <div class="column" style="background-color:#aaa;">
+          <h1>One-on-One Dealings</h1>
+          <p> <h3>All your business dealings are one-on-one. You pay no brokerage fees or commissions</h3>
+      </p>
+        </div>
+      
+</div>
+
+<script>
+// Get the elements with class="column"
+var elements = document.getElementsByClassName("column");
+
+// Declare a loop variable
+var i;
+
+// Grid View
+function gridView() {
+  for (i = 0; i < elements.length; i++) {
+    elements[i].style.width = "50%";
+  }
+}
+
+</script>
+
+</body>
+</html>
